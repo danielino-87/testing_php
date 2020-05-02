@@ -49,7 +49,7 @@ function get_position(position)
         navigator.geolocation.getCurrentPosition(get_position,get_error,{'enableHighAccuracy':true,'timeout':30000,'maximumAge':0});
 		
         $.ajax({
-        url:'input_php',
+        url:'php/input_php',
         data: {
             'lat': position.coords.latitude,
             'lng': position.coords.longitude
@@ -105,7 +105,7 @@ function get_error(error)
   <tr>
     <td>
       <table>
-        <form method="post" action="input_php">
+        <form method="post" action="php/input_php">
         <tr>
           <td>Nome</td>
           <td><input type="text" name="name" size="20">
